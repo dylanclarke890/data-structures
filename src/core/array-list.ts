@@ -1,9 +1,9 @@
 export default class ArrayList<T> {
-  length: number;
+  length: number = 0;
   private capacity: number;
   private items: (T | undefined)[];
 
-  constructor(capacity: number) {
+  constructor(capacity?: number) {
     this.capacity = capacity ?? 3;
     this.length = 0;
     this.items = new Array(this.capacity);
@@ -18,7 +18,11 @@ export default class ArrayList<T> {
     if (this.length === this.capacity) {
       this.increaseCapacity();
     }
-    this.items[this.length++] = item;
+    for (let i = this.length; i >= 0; i--) {
+      this.items[i + 1] = this.items[i];
+    }
+    this.items[0] = item;
+    this.length++;
   }
 
   deque(): T | undefined {
@@ -27,7 +31,8 @@ export default class ArrayList<T> {
     for (let i = 1; i < this.length; i++) {
       this.items[i - 1] = this.items[i];
     }
-    this.items[this.length--] = undefined;
+    this.items[--this.length] = undefined;
+
     return item;
   }
 
