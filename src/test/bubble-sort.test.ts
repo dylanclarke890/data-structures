@@ -1,4 +1,4 @@
-import { bubble } from "../core/sort";
+import { bubble } from "../core/bubble-sort";
 
 describe("sort_bubble", () => {
   it("returns a sorted array", () => {
