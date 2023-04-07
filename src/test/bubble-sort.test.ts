@@ -1,6 +1,6 @@
 import { bubble } from "../core/bubble-sort";
 
-describe("sort_bubble", () => {
+describe("bubble sort", () => {
   it("returns a sorted array", () => {
     const array = [5, 3, 1, 2];
     bubble(array);

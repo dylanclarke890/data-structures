@@ -1,6 +1,6 @@
 import { sqrtJumps } from "../core/two-crystal-balls";
 
-describe("two_crystal_balls", () => {
+describe("two crystal balls", () => {
   it("returns the index of the first break", () => {
     const array = [false, false, false, false, false, false, false, true];
     expect(sqrtJumps(array)).toBe(array.findIndex((v) => v === true));
