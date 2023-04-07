@@ -1,12 +1,12 @@
-import ListNode from "./node";
+import { SingleLinkedNode } from "./node";
 
 /**
  * FIFO (first-in, first-out structure).
  */
 export default class Queue<T> {
   public length: number;
-  private head?: ListNode<T>;
-  private tail?: ListNode<T>;
+  private head?: SingleLinkedNode<T>;
+  private tail?: SingleLinkedNode<T>;
 
   constructor() {
     this.head = this.tail = undefined;
@@ -18,7 +18,7 @@ export default class Queue<T> {
    */
   enqueue(item: T): void {
     this.length++;
-    const node = new ListNode(item);
+    const node = new SingleLinkedNode(item);
     if (!this.tail) {
       this.tail = this.head = node;
     }
