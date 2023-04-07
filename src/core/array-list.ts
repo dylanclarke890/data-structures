@@ -14,6 +14,7 @@ export default class ArrayList<T> {
     return this.items[idx];
   }
 
+  // FIXME: add to end of list not start
   enqueue(item: T): void {
     if (this.length === this.capacity) {
       this.increaseCapacity();
