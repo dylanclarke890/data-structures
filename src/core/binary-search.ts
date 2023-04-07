@@ -3,7 +3,7 @@
  * search point is smaller or larger than the target.
  * @bigO O(log n)
  */
-export function binary(haystack: number[], needle: number): boolean {
+export function binarySearch(haystack: number[], needle: number): boolean {
   let low = 0;
   let high = haystack.length;
 
