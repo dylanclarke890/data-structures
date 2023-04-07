@@ -1,7 +1,7 @@
-export class Node<T> {
+export default class ListNode<T> {
   value: T;
-  next?: Node<T>;
-  prev?: Node<T>;
+  next?: ListNode<T>;
+  prev?: ListNode<T>;
 
   constructor(value: T) {
     this.value = value;
