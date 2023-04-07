@@ -1,5 +1,8 @@
 import ListNode from "./node";
 
+/**
+ * FIFO (first-in, first-out structure).
+ */
 export default class Queue<T> {
   public length: number;
   private head?: ListNode<T>;
@@ -10,6 +13,9 @@ export default class Queue<T> {
     this.length = 0;
   }
 
+  /**
+   * @bigO O(1)
+   */
   enqueue(item: T): void {
     this.length++;
     const node = new ListNode(item);
@@ -21,6 +27,9 @@ export default class Queue<T> {
     this.tail = node;
   }
 
+  /**
+   * @bigO O(1)
+   */
   deque(): T | undefined {
     if (!this.head) return undefined;
     this.length--;
@@ -34,6 +43,9 @@ export default class Queue<T> {
     return head.value;
   }
 
+  /**
+   * @bigO O(1)
+   */
   peek(): T | undefined {
     return this.head?.value;
   }
