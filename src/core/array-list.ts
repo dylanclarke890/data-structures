@@ -14,16 +14,11 @@ export default class ArrayList<T> {
     return this.items[idx];
   }
 
-  // FIXME: add to end of list not start
   enqueue(item: T): void {
     if (this.length === this.capacity) {
       this.increaseCapacity();
     }
-    for (let i = this.length - 1; i > 0; i--) {
-      this.items[i + 1] = this.items[i];
-    }
-    this.length++;
-    this.items[0] = item;
+    this.items[this.length++] = item;
   }
 
   deque(): T | undefined {
@@ -32,8 +27,7 @@ export default class ArrayList<T> {
     for (let i = 1; i < this.length; i++) {
       this.items[i - 1] = this.items[i];
     }
-    this.length--;
-    this.items[this.length] = undefined;
+    this.items[this.length--] = undefined;
     return item;
   }
 
