@@ -8,7 +8,7 @@ interface ILinkedList<T> {
   get(index: number): T | undefined;
 }
 
-export class LinkedList<TItem> implements ILinkedList<TItem> {
+export class DoublyLinkedList<TItem> implements ILinkedList<TItem> {
   get length(): number {
     throw new Error("Method not implemented.");
   }
