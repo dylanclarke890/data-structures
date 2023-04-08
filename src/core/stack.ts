@@ -1,4 +1,4 @@
-import { SingleLinkedNode } from "./node";
+import { SingleLinkedNode } from "./utils/nodes";
 
 /**
  * LIFO (last-in, first-out structure).

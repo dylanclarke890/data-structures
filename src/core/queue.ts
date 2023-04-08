@@ -1,4 +1,4 @@
-import { SingleLinkedNode } from "./node";
+import { SingleLinkedNode } from "./utils/nodes";
 
 /**
  * FIFO (first-in, first-out structure).

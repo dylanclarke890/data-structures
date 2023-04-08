@@ -1,4 +1,4 @@
-import { DoublyLinkedNode } from "./node";
+import { DoublyLinkedNode } from "./utils/nodes";
 
 interface ILinkedList<T> {
   get length(): number;
@@ -118,7 +118,7 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
     if (node.prev) {
       node.prev.next = node.next;
     }
-    
+
     if (node.next) {
       node.next.prev = node.prev;
     }
@@ -130,7 +130,6 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
     if (node === this.tail) {
       this.tail = node.next;
     }
-
 
     node.next = node.prev = undefined;
     return node.value;
