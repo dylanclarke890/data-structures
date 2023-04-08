@@ -35,6 +35,7 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
   append(item: T): void {
     const node = new DoublyLinkedNode(item);
     this.length++;
+
     if (!this.tail) {
       this.head = this.tail = node;
       return;
@@ -58,13 +59,9 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
       return;
     }
 
-    let curr = this.head;
-    for (let i = 0; i < index; i++) {
-      curr = this.head?.next;
-    }
-    curr = curr as NonNullable<DoublyLinkedNode<T>>;
-
+    const curr = this.getAt(index) as NonNullable<DoublyLinkedNode<T>>;
     const node = new DoublyLinkedNode(item);
+
     node.next = curr;
     node.prev = curr.prev;
     curr.next = node;
@@ -75,14 +72,67 @@ export class DoublyLinkedList<T> implements ILinkedList<T> {
   }
 
   remove(item: T) {
-    return item;
+    let curr = this.head;
+    for (let i = 0; curr && i < this.length; i++) {
+      if (curr.value === item) {
+        break;
+      }
+      curr = curr.next;
+    }
+
+    if (!curr) {
+      return undefined;
+    }
+
+    return this.removeNode(curr);
   }
 
   removeAt(index: number) {
-    return null as T;
+    const node = this.getAt(index);
+    if (!node) {
+      return undefined;
+    }
+
+    return this.removeNode(node);
   }
 
-  get(index: number) {
-    return null as T;
+  get(index: number): T | undefined {
+    return this.getAt(index)?.value;
+  }
+
+  private getAt(idx: number): DoublyLinkedNode<T> | undefined {
+    let curr = this.head;
+    for (let i = 0; curr && i < idx; i++) {
+      curr = curr?.next;
+    }
+    return curr;
+  }
+
+  private removeNode(node: DoublyLinkedNode<T>): T | undefined {
+    if (--this.length === 0) {
+      const out = this.head?.value;
+      this.head = this.tail = undefined;
+      return out;
+    }
+
+    if (node.prev) {
+      node.prev.next = node.next;
+    }
+    
+    if (node.next) {
+      node.next.prev = node.prev;
+    }
+
+    if (node === this.head) {
+      this.head = node.next;
+    }
+
+    if (node === this.tail) {
+      this.tail = node.next;
+    }
+
+
+    node.next = node.prev = undefined;
+    return node.value;
   }
 }
