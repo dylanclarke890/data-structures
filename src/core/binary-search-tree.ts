@@ -13,9 +13,33 @@ export default class BinarySearchTree {
     return this.findNeedle(this.head, value);
   }
 
-  insert(value: number) {}
+  insert(value: number): void {
+    const node = new BinaryNode(value);
+    if (!this.head) {
+      this.head = node;
+      return;
+    }
+
+    this.insertNode(node, this.head);
+  }
 
   delete(value: number) {}
+
+  private insertNode(item: BinaryNode<number>, curr: BinaryNode<number>): void {
+    if (item.value <= curr.value) {
+      if (curr.left) this.insertNode(item, curr.left);
+      else {
+        curr.left = item;
+        return;
+      }
+      return;
+    }
+
+    if (curr.right) this.insertNode(item, curr.right);
+    else {
+      curr.right = item;
+    }
+  }
 
   private findNeedle(node: BinaryNode<number> | undefined, needle: number): boolean {
     if (!node) {
@@ -26,7 +50,7 @@ export default class BinarySearchTree {
       return true;
     }
 
-    if (node.value < needle) {
+    if (node.value <= needle) {
       this.findNeedle(node.left, needle);
     }
 
