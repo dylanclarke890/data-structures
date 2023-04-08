@@ -7,10 +7,10 @@ export class SingleLinkedNode<T> {
   }
 }
 
-export class DoubleLinkedNode<T> {
+export class DoublyLinkedNode<T> {
   value: T;
-  next?: DoubleLinkedNode<T>;
-  prev?: DoubleLinkedNode<T>;
+  next?: DoublyLinkedNode<T>;
+  prev?: DoublyLinkedNode<T>;
 
   constructor(value: T) {
     this.value = value;
