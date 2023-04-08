@@ -7,4 +7,14 @@ describe("Binary Search Tree", () => {
     binaryTree.head = bst;
     expect(binaryTree.find(40)).toBe(true);
   });
+
+  it("Insert", () => {
+    const binaryTree = new BinarySearchTree();
+    binaryTree.head = bst;
+  });
+
+  it("Delete", () => {
+    const binaryTree = new BinarySearchTree();
+    binaryTree.head = bst;
+  });
 });
