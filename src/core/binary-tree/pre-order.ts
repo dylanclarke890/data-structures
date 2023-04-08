@@ -7,8 +7,9 @@ function walk(curr: BinaryNode<number> | undefined, path: number[]): number[] {
   // Pre
   path.push(curr.value);
 
-  walk(curr.left, []);
-  walk(curr.right, []);
+  // Recurse
+  walk(curr.left, path);
+  walk(curr.right, path);
 
   // Post
 
@@ -16,7 +17,5 @@ function walk(curr: BinaryNode<number> | undefined, path: number[]): number[] {
 }
 
 export default function preOrderSearch(head: BinaryNode<number>): number[] {
-  const p = walk(head, []);
-  console.log(p);
   return walk(head, []);
 }

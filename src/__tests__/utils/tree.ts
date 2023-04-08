@@ -1,10 +1,4 @@
-/* istanbul ignore file */
-
-type BinaryNode<T> = {
-  value: T;
-  left?: BinaryNode<T>;
-  right?: BinaryNode<T>;
-};
+import { BinaryNode } from "../../core/utils/nodes";
 
 export const tree: BinaryNode<number> = {
   value: 20,
