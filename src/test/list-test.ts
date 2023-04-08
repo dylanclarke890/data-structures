@@ -1,4 +1,4 @@
-export function test_list(list: any): void {
+export function testList(list: any): void {
   list.append(5);
   list.append(7);
   list.append(9);
