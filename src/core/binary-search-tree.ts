@@ -30,4 +30,6 @@ export default class BinarySearchTree {
   }
 
   insert(value: number) {}
+
+  delete(value: number) {}
 }
