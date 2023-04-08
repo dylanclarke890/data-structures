@@ -53,6 +53,22 @@ export default class BinarySearchTree {
     return node;
   }
 
+  min(): number {
+    if (!this.head) {
+      return Infinity;
+    }
+
+    return this.findMinValue(this.head);
+  }
+
+  max(): number {
+    if (!this.head) {
+      return 0;
+    }
+
+    return this.findMaxValue(this.head);
+  }
+
   private findMinValue(node: BinaryNode<number>): number {
     let minValue = node.value;
     while (node.left) {
@@ -61,6 +77,16 @@ export default class BinarySearchTree {
     }
     return minValue;
   }
+
+  private findMaxValue(node: BinaryNode<number>): number {
+    let maxValue = node.value;
+    while (node.right) {
+      maxValue = node.right.value;
+      node = node.right;
+    }
+    return maxValue;
+  }
+
   private insertNode(item: BinaryNode<number>, curr: BinaryNode<number>): void {
     if (item.value <= curr.value) {
       if (curr.left) this.insertNode(item, curr.left);
