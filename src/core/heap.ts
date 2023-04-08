@@ -13,12 +13,18 @@ export class MinHeap implements IHeap {
     this.items = [];
   }
 
+  /**
+   * @bigO O(log n)
+   */
   insert(value: number): void {
     this.items[this.length] = value;
     this.heapifyUp(this.length);
     this.length++;
   }
 
+  /**
+   * @bigO O(log n)
+   */
   delete(): number {
     const out = this.items[0];
     if (this.length === 0) {
@@ -92,12 +98,18 @@ export class MaxHeap implements IHeap {
     this.items = [];
   }
 
+  /**
+   * @bigO O(log n)
+   */
   insert(value: number): void {
     this.items[this.length] = value;
     this.heapifyUp(this.length);
     this.length++;
   }
 
+  /**
+   * @bigO O(log n)
+   */
   delete(): number {
     const out = this.items[0];
     if (this.length === 0) {
