@@ -13,6 +13,10 @@ export default class BinarySearchTree {
     return this.findNeedle(this.head, value);
   }
 
+  insert(value: number) {}
+
+  delete(value: number) {}
+
   private findNeedle(node: BinaryNode<number> | undefined, needle: number): boolean {
     if (!node) {
       return false;
@@ -28,8 +32,4 @@ export default class BinarySearchTree {
 
     return this.findNeedle(node.right, needle);
   }
-
-  insert(value: number) {}
-
-  delete(value: number) {}
 }
