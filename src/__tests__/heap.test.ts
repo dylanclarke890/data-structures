@@ -1,5 +1,5 @@
-import Heap from "../core/heap";
+import { MinHeap } from "../core/heap";
 
-test("Heap", () => {
-  const heap = new Heap();
+test("Min Heap", () => {
+  const heap = new MinHeap();
 });
