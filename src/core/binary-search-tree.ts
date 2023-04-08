@@ -23,10 +23,10 @@ export default class BinarySearchTree {
     }
 
     if (node.value < needle) {
-      this.findNeedle(node.right, needle);
+      this.findNeedle(node.left, needle);
     }
 
-    return this.findNeedle(node.left, needle);
+    return this.findNeedle(node.right, needle);
   }
 
   insert(value: number) {}
