@@ -15,13 +15,13 @@ export class DoublyLinkedNode<T> extends BaseNode<T> {
   prev?: DoublyLinkedNode<T>;
 }
 
-export class BinaryTreeNode<T> extends BaseNode<T> {
-  left?: BinaryTreeNode<T>;
-  right?: BinaryTreeNode<T>;
+export class BinaryNode<T> extends BaseNode<T> {
+  left?: BinaryNode<T>;
+  right?: BinaryNode<T>;
 }
 
-export class GeneralTreeNode<T> extends BaseNode<T> {
-  children: BinaryTreeNode<T>[];
+export class GeneralNode<T> extends BaseNode<T> {
+  children: GeneralNode<T>[];
 
   constructor(value: T) {
     super(value);
