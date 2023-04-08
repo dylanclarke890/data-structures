@@ -4,7 +4,7 @@ interface IHeap {
   delete(value: number): void;
 }
 
-export class MinHeap {
+export class MinHeap implements IHeap {
   public length: number;
   private items: number[];
 
@@ -87,7 +87,7 @@ export class MinHeap {
   }
 }
 
-export class MaxHeap {
+export class MaxHeap implements IHeap {
   public length: number;
   private data: number[];
 
