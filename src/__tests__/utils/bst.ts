@@ -1,5 +1,6 @@
 import { BinaryNode } from "../../core/utils/nodes";
 
+
 export const bst: BinaryNode<number> = {
   value: 20,
   left: {
@@ -10,7 +11,7 @@ export const bst: BinaryNode<number> = {
   right: {
     value: 25,
     left: {
-      value: 20,
+      value: 30,
       left: undefined,
       right: undefined,
     },

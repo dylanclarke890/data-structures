@@ -103,19 +103,15 @@ export default class BinarySearchTree {
     }
   }
 
-  private findNeedle(node: BinaryNode<number> | undefined, needle: number): boolean {
-    if (!node) {
+  private findNeedle(curr: BinaryNode<number> | undefined, needle: number): boolean {
+    if (!curr) {
       return false;
     }
 
-    if (node.value === needle) {
+    if (curr.value === needle) {
       return true;
     }
 
-    if (node.value <= needle) {
-      this.findNeedle(node.left, needle);
-    }
-
-    return this.findNeedle(node.right, needle);
+    return this.findNeedle(curr.value > needle ? curr.left : curr.right, needle);
   }
 }
