@@ -5,8 +5,12 @@ function walk(curr: BinaryNode<number> | undefined, path: number[]): number[] {
     return path;
   }
 
+  // Pre
+
   walk(curr.left, []);
   walk(curr.right, []);
+
+  // Post
   path.push(curr.value);
 
   return path;

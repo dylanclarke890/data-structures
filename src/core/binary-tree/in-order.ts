@@ -1,13 +1,17 @@
 import { BinaryNode } from "../utils/nodes";
 
 function walk(curr: BinaryNode<number> | undefined, path: number[]): number[] {
+  console.log(curr);
   if (!curr) {
     return path;
   }
 
+  // Pre
+  walk(curr.left, []);
+
   path.push(curr.value);
 
-  walk(curr.left, []);
+  // Post
   walk(curr.right, []);
 
   return path;
