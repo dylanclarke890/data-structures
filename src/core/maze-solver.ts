@@ -53,6 +53,11 @@ function walk(
   return false;
 }
 
+/**
+ * Find the path in a maze, given a start and end point. Recursively tries different paths through the arrays
+ * until a suitable path is found, or all searchable points have been exhausted.
+ * @bigO O(n)
+ */
 export default function mazeSolver(
   maze: string[],
   wall: string,
