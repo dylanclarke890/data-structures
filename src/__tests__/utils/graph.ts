@@ -1,5 +1,5 @@
-type GraphEdge = { to: number; weight: number };
-type WeightedAdjacencyList = GraphEdge[][];
+import { WeightedAdjacencyList } from "../../core/adj-list-dfs";
+
 type WeightedAdjacencyMatrix = number[][]; // A number means weight
 
 export const list1: WeightedAdjacencyList = [];
