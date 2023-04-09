@@ -2,7 +2,9 @@
  * Works it's way through the array from the 0th position, swapping elements with the item in the next position
  * if it is smaller than it. Once done the last item in the array will be the largest.
  * This then repeats until the array is sorted, omitting the last position that it ended on.
- * @bigO O(n²)
+ * @bigOBest O(n)
+ * @bigOAverage O(n²)
+ * @bigOWorst O(n²)
  * @returns A reference to the same list, which was mutated in place.
  */
 export function bubble(array: number[]): number[] {
