@@ -1,4 +1,4 @@
-import LRU from "../core/least-recently.used";
+import LRU from "../../core/data-structures/least-recently.used";
 
 test("LRU", function () {
   const lru = new LRU<string, number>(3);

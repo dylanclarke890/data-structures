@@ -1,4 +1,4 @@
-import { DoublyLinkedList } from "../core/doubly-linked-list";
+import { DoublyLinkedList } from "../../core/data-structures/doubly-linked-list";
 import { testList } from "../utils/list-test";
 
 test("DoublyLinkedList", function () {

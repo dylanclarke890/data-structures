@@ -1,4 +1,4 @@
-import { MaxHeap, MinHeap } from "../core/heap";
+import { MaxHeap, MinHeap } from "../../core/data-structures/heap";
 
 test("min heap", function () {
   const heap = new MinHeap();

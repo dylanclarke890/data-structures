@@ -1,4 +1,4 @@
-import ArrayList from "../core/array-list";
+import ArrayList from "../../core/data-structures/array-list";
 
 describe("array list", () => {
   it("pushes and pops items correctly", () => {
