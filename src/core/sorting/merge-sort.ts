@@ -1,3 +1,12 @@
+/**
+ * Sorts an array by splitting it into two sub-arrays, and recursively sorting those. Recursion is stopped when there
+ * is only one element in the subarray (and so that sub array is "sorted"), and the ordered sub arrays are merged together
+ * to produce the final array.
+ * @bigOBest O(1) - when just one element is in the array.
+ * @bigOAverage O(n log n)
+ * @bigOWorst O(n log n)
+ * @returns A reference to the new array (the original array is not modified).
+ */
 export default function mergeSort(array: number[]): number[] {
   return sort(array, 0, array.length - 1);
 }
