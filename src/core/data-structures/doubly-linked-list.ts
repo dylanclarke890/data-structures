@@ -1,4 +1,4 @@
-import { DoublyLinkedNode } from "./utils/nodes";
+import { DoublyLinkedNode } from "../utils/nodes";
 
 interface ILinkedList<T> {
   get length(): number;

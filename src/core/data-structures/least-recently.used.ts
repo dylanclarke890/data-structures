@@ -1,4 +1,4 @@
-import { DoublyLinkedNode } from "./utils/nodes";
+import { DoublyLinkedNode } from "../utils/nodes";
 
 export default class LRU<K, V> {
   private length: number;
