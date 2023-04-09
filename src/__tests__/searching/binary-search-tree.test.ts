@@ -1,5 +1,5 @@
-import BinarySearchTree from "../core/binary-search-tree";
-import { bst } from "./utils/bst";
+import BinarySearchTree from "../../core/searching/binary-search-tree";
+import { bst } from "../utils/bst";
 
 describe("Binary Search Tree", () => {
   it("Find, Insert, Delete", () => {

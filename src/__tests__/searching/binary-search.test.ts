@@ -1,4 +1,4 @@
-import { binarySearch } from "../core/binary-search";
+import { binarySearch } from "../../core/searching/binary-search";
 
 describe("binary search", () => {
   it("returns true when an item is present", () => {

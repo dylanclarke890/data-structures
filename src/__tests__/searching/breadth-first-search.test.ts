@@ -1,5 +1,5 @@
-import breadthFirstSearch from "../core/breadth-first-search";
-import { tree } from "./utils/tree";
+import breadthFirstSearch from "../../core/searching/breadth-first-search";
+import { tree } from "../utils/tree";
 
 test("bt bfs", function () {
   expect(breadthFirstSearch(tree, 45)).toEqual(true);

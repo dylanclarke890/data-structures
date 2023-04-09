@@ -1,4 +1,4 @@
-import { linearSearch } from "../core/linear-search";
+import { linearSearch } from "../../core/searching/linear-search";
 
 describe("linear search", () => {
   it("returns true when an item is present", () => {
