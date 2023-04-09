@@ -1,9 +1,6 @@
 import { bubble } from "../../core/sorting/bubble-sort";
+import sortTest from "../utils/sort-test";
 
-describe("bubble sort", () => {
-  it("returns a sorted array", () => {
-    const array = [5, 3, 1, 2];
-    bubble(array);
-    expect(array).toEqual([1, 2, 3, 5]);
-  });
+test("Bubble Sort", () => {
+  sortTest(bubble);
 });

@@ -1,5 +1,9 @@
-export default function quickSort(arr: number[]): void {
+/**
+ * @returns A reference to the same array, which was mutated in place.
+ */
+export default function quickSort(arr: number[]): number[] {
   sort(arr, 0, arr.length - 1);
+  return arr;
 }
 
 function sort(arr: number[], low: number, high: number): void {

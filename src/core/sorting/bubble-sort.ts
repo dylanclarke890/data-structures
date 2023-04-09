@@ -3,8 +3,9 @@
  * if it is smaller than it. Once done the last item in the array will be the largest.
  * This then repeats until the array is sorted, omitting the last position that it ended on.
  * @bigO O(n²)
+ * @returns A reference to the same list, which was mutated in place.
  */
-export function bubble(array: number[]): void {
+export function bubble(array: number[]): number[] {
   const n = array.length;
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n - 1 - i; j++) {
@@ -15,4 +16,6 @@ export function bubble(array: number[]): void {
       }
     }
   }
+
+  return array;
 }
