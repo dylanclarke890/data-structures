@@ -1,4 +1,4 @@
-import quickSort from "../core/quick-sort";
+import quickSort from "../../core/sorting/quick-sort";
 
 test("quickSort", () => {
   const arr = [16, 123, 23, 5, 6];
