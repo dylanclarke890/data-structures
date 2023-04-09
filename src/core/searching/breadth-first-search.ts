@@ -1,5 +1,5 @@
-import Queue from "./queue";
-import { BinaryNode } from "./utils/nodes";
+import Queue from "../data-structures/queue";
+import { BinaryNode } from "../utils/nodes";
 
 export default function breadthFirstSearch(head: BinaryNode<number>, needle: number): boolean {
   const q = new Queue<BinaryNode<number>>();

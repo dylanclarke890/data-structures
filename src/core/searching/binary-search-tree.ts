@@ -1,4 +1,4 @@
-import { BinaryNode } from "./utils/nodes";
+import { BinaryNode } from "../utils/nodes";
 
 export default class BinarySearchTree {
   head?: BinaryNode<number>;
