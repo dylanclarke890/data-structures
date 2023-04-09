@@ -1,4 +1,4 @@
-import BinarySearchTree from "../../core/searching/binary-search-tree";
+import BinarySearchTree from "../../core/data-structures/binary-search-tree";
 import { bst } from "../utils/bst";
 
 describe("Binary Search Tree", () => {
