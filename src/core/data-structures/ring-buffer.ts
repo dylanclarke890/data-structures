@@ -28,21 +28,24 @@ export default class RingBuffer<T> {
       this.items[buffer + i] = tmp[(this.head + i) % prevCapacity];
     }
     this.head = buffer;
-    this.tail = this.capacity - buffer - 1;
+    this.tail = buffer + this.length;
   }
 
   enqueue(item: T): void {
     if (this.length === this.capacity) {
       this.extendCapacity();
     }
-    this.items[++this.tail % this.capacity] = item;
+    this.items[this.tail % this.capacity] = item;
+    this.tail++;
+    this.length++;
   }
 
   deque(): T | undefined {
     if (this.length === 0) return undefined;
-    const idx = this.head-- % this.capacity;
+    const idx = this.head++ % this.capacity;
     const item = this.items[idx];
     this.items[idx] = undefined;
+    this.length--;
     return item;
   }
 }
