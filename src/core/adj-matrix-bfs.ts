@@ -1,4 +1,4 @@
-import Queue from "./queue";
+import Queue from "./data-structures/queue";
 
 export default function adjMatrixBfs(graph: number[][], source: number, needle: number): number[] {
   const seen = new Array(graph.length).fill(false);
