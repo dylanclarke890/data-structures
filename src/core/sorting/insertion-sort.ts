@@ -5,6 +5,7 @@
  * @bigOBest O(n)
  * @bigOAverage O(n²)
  * @bigOWorst O(n²)
+ * @returns A reference to the same array, sorted in place.
  */
 export default function insertionSort(array: number[]): number[] {
   for (let i = 1; i < array.length; i++) {
