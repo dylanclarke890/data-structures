@@ -1,4 +1,4 @@
-import dijkstraList from "../core/djikstra";
+import dijkstraList from "../core/dijkstra";
 import { list1 } from "./utils/graph";
 
 test("dijkstra via adj list", function () {
