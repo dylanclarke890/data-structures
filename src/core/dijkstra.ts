@@ -1,5 +1,8 @@
 import { WeightedAdjacencyList } from "./adj-list-dfs";
 
+/**
+ * @bigO O(V² + E)
+ */
 export default function djikstraList(source: number, needle: number, graph: WeightedAdjacencyList) {
   const seen: boolean[] = new Array(graph.length).fill(false);
   const prev: number[] = new Array(graph.length).fill(-1);
