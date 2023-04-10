@@ -9,19 +9,26 @@
  * @returns A reference to the same array, which was mutated in place.
  */
 export default function quickSort(arr: number[]): number[] {
-  sort(arr, 0, arr.length - 1);
+  sort(arr);
   return arr;
 }
 
-function sort(arr: number[], low: number, high: number): void {
-  if (low >= high) {
-    return;
+function sort(arr: number[]): void {
+  const stack: [number, number][] = [];
+  stack.push([0, arr.length - 1]);
+
+  while (stack.length > 0) {
+    const [low, high] = stack.pop() as [number, number];
+
+    if (low >= high) {
+      continue;
+    }
+
+    const pivotIdx = partition(arr, low, high);
+
+    stack.push([low, pivotIdx - 1]);
+    stack.push([pivotIdx + 1, high]);
   }
-
-  const pivotIdx = partition(arr, low, high);
-
-  sort(arr, low, pivotIdx - 1);
-  sort(arr, pivotIdx + 1, high);
 }
 
 function partition(arr: number[], low: number, high: number): number {
