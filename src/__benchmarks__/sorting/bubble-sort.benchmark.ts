@@ -16,7 +16,7 @@ function setup() {
 
 function run() {
   arrays.forEach((a) => {
-    timeFunction("Bubble Sort", () => {
+    timeFunction(`Bubble Sort (${a.length})`, () => {
       bubbleSort(a);
     });
   });
