@@ -1,13 +1,15 @@
 /**
- * Works it's way through the array from the 0th position, swapping elements with the item in the next position
- * if it is smaller than it. Once done the last item in the array will be the largest.
- * This then repeats until the array is sorted, omitting the last position that it ended on.
- * @bigOBest O(n)
- * @bigOAverage O(n²)
- * @bigOWorst O(n²)
- * @returns A reference to the same list, which was mutated in place.
+ * Bubble sort is a comparison-based sorting algorithm that repeatedly steps through the
+ * array, comparing adjacent elements and swapping them if they are in the wrong order.
+ * The algorithm continues iterating through the array until no swaps are needed, indicating
+ * that the array is sorted. Bubble sort has a simple implementation, but it is inefficient
+ * for large datasets due to its quadratic time complexity.
+ *
+ * @bigOLower Ω(n) - When the input array is already sorted or nearly sorted.
+ * @bigOUpper O(n²) - When the input array is sorted in reverse order or is completely unsorted.
+ * @returns A reference to the same array, which was mutated in place.
  */
-export function bubble(array: number[]): number[] {
+export default function bubbleSort(array: number[]): number[] {
   const n = array.length;
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n - 1 - i; j++) {

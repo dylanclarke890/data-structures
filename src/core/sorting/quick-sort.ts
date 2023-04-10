@@ -1,4 +1,11 @@
 /**
+ * Quick sort is a comparison-based sorting algorithm that uses a divide-and-conquer approach.
+ * It works by selecting a 'pivot' element from the array and partitioning the other elements
+ * into two groups, according to whether they are less than or greater than the pivot. The
+ * sub-arrays are then sorted recursively, and combined to produce the final sorted array.
+ *
+ * @bigOLower Ω(n log n) - When the array is partitioned equally or nearly equally (balanced partitioning).
+ * @bigOUpper O(n²) - If the array is partitioned poorly (unbalanced partitioning).
  * @returns A reference to the same array, which was mutated in place.
  */
 export default function quickSort(arr: number[]): number[] {

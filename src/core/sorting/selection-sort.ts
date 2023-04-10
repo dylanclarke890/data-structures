@@ -1,11 +1,14 @@
 /**
- * Sorts an array by first finding the smallest element and exchanging it with the element at the first index.
- * Then find the second smallest element and exchange with the element at the second index. Continue in this manner
- * until all elements have been processed.
- * @bigOBest O(n)
- * @bigOAverage O(n²)
- * @bigOWorst O(n²)
- * @returns A reference to the same array, sorted in place.
+ * Selection sort is a comparison-based sorting algorithm that sorts the input array by
+ * repeatedly finding the minimum element from the unsorted part and putting it at the
+ * beginning of the sorted part. The algorithm maintains two subarrays within the input
+ * array: the sorted part, which starts empty at the leftmost end, and the unsorted part.
+ * In each iteration, the minimum element from the unsorted subarray is moved to the end
+ * of the sorted subarray.
+ *
+ * @bigOLower Ω(n²)
+ * @bigOUpper O(n²) - same as the lower bound.
+ * @returns A reference to the same array, which was mutated in place.
  */
 export default function selectionSort(array: number[]): number[] {
   for (let i = 0; i < array.length; i++) {
