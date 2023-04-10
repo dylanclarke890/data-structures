@@ -5,8 +5,8 @@
  * that the array is sorted. Bubble sort has a simple implementation, but it is inefficient
  * for large datasets due to its quadratic time complexity.
  *
- * @bigOLower Ω(n) - When the input array is already sorted or nearly sorted.
- * @bigOUpper O(n²) - When the input array is sorted in reverse order or is completely unsorted.
+ * @lowerBound Ω(n) - When the input array is already sorted or nearly sorted.
+ * @upperBound O(n²) - When the input array is sorted in reverse order or is completely unsorted.
  * @returns A reference to the same array, which was mutated in place.
  */
 export default function bubbleSort(array: number[]): number[] {

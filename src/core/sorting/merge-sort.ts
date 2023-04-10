@@ -4,8 +4,8 @@
  * merging the sorted halves back together. The base case for the recursion is when the array
  * has only one element, at which point it is considered sorted.
  *
- * @bigOLower Ω(n log n)
- * @bigOUpper O(n log n) - same as the lower bound.
+ * @lowerBound Ω(n log n)
+ * @upperBound O(n log n) - same as the lower bound.
  * @returns A new sorted array, as the original input array is not mutated in place.
  */
 export default function mergeSort(array: number[]): number[] {

@@ -6,8 +6,8 @@
  * In each iteration, the minimum element from the unsorted subarray is moved to the end
  * of the sorted subarray.
  *
- * @bigOLower Ω(n²)
- * @bigOUpper O(n²) - same as the lower bound.
+ * @lowerBound Ω(n²)
+ * @upperBound O(n²) - same as the lower bound.
  * @returns A reference to the same array, which was mutated in place.
  */
 export default function selectionSort(array: number[]): number[] {
