@@ -64,7 +64,6 @@ function warmUp() {
 }
 
 function displayResults(results: BenchmarkResults) {
-  console.log(results);
   const bestForSize = new Map<number, { name: string; time: number }[]>();
   Object.keys(results).forEach((r) => {
     const { times, size } = results[r];

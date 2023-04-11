@@ -14,11 +14,13 @@ export default function quickSort(arr: number[]): number[] {
 }
 
 function sort(arr: number[]): void {
-  const stack: [number, number][] = [];
+  const stack: [number, number][] = Array.from({ length: arr.length });
   stack.push([0, arr.length - 1]);
+  let length = 1;
 
-  while (stack.length > 0) {
+  while (length) {
     const [low, high] = stack.pop() as [number, number];
+    length--;
 
     if (low >= high) {
       continue;
@@ -27,7 +29,9 @@ function sort(arr: number[]): void {
     const pivotIdx = partition(arr, low, high);
 
     stack.push([low, pivotIdx - 1]);
+    length++;
     stack.push([pivotIdx + 1, high]);
+    length++;
   }
 }
 
