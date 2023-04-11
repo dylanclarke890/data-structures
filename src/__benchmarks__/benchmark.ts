@@ -15,7 +15,7 @@ const sortingBenchmarks: { [x: string]: Function } = {
 };
 
 (function benchmark() {
-  const iterations = 10;
+  const iterations = 1;
   const results: BenchmarkResults = {};
   for (let i = 0; i < iterations; i++) {
     shuffleArray(Object.keys(sortingBenchmarks)).forEach((b) => {
@@ -53,7 +53,7 @@ function shuffleArray<T>(arr: T[]): T[] {
 }
 
 function setup() {
-  arrays = createArrays(3);
+  arrays = createArrays(4);
 }
 
 function warmUp() {
@@ -64,6 +64,7 @@ function warmUp() {
 }
 
 function displayResults(results: BenchmarkResults) {
+  console.log(results);
   const bestForSize = new Map<number, { name: string; time: number }[]>();
   Object.keys(results).forEach((r) => {
     const { times, size } = results[r];
